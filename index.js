@@ -26,8 +26,9 @@ class RelayAutoTuningPIController {
      * @param {number} initialKp - Initial proportional gain. Default is 1.0.
      * @param {number} initialKi - Initial integral gain. Default is 0.0.
      * @param {number} dt - Time interval between updates. Default is 1.0.
+     * @param {number} initialMeasuredValue - Initial value measured from the system. Default is 0.0.
      */
-    constructor(initialKp = 1.0, initialKi = 0.0, dt = 1.0) {
+    constructor(initialKp = 1.0, initialKi = 0.0, dt = 1.0, initialMeasuredValue = 0.0) {
         this.kp = initialKp;
         this.ki = initialKi;
         this.dt = dt;
