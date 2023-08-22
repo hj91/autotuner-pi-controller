@@ -13,12 +13,15 @@ Copy the `autotuner-pi-controller/index.js` file to your project directory or in
 ```javascript
 const RelayAutoTuningPIController = require('./path/to/autotuner-pi-controller/index.js');
 
-// Create a new controller with initial parameters
-const piController = new RelayAutoTuningPIController(1.0, 0.0, 1.0);
+// Initial measured value
+let initialMeasuredValue = 40;
+
+// Create a new controller with initial parameters and the initial measured value
+const piController = new RelayAutoTuningPIController(1.0, 0.0, 1.0, initialMeasuredValue);
 
 // Simulate a process and auto-tune the controller
 const setpoint = 50;
-let measuredValue = 40;
+let measuredValue = initialMeasuredValue;  // Use the initial measured value here
 let controlOutput = piController.autoTune(setpoint, measuredValue);
 
 // Use the controller to calculate the control output
