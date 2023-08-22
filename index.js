@@ -36,7 +36,8 @@ class RelayAutoTuningPIController {
 
         this.relayAmplitude = 1.0;
         this.lastSwitchTime = Date.now();
-        this.relayState = 1;
+        // Corrected relayState for both positive and negative values handling 
+        this.relayState = (initialMeasuredValue >= 0) ? -1 : 1;
         this.cycleTimes = [];
 
         // Error recovery state
