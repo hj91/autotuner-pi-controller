@@ -1,6 +1,6 @@
 {
   "name": "autotuner-pi-controller",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "`autotuner-pi-controller` is a Proportional-Integral (PI) controller that uses the Relay Feedback Test for auto-tuning. The Relay Feedback Test is used to estimate the ultimate gain (Ku) and ultimate period$",
   "main": "index.js",
   "scripts": {
